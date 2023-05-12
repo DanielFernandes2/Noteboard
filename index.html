@@ -17,7 +17,9 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-danger">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Noteboard</a>
+        <a class="navbar-brand" href="#">
+          <i class="bi bi-journal"></i>
+          Noteboard</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -49,11 +51,11 @@
               </a>
               
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Importantes</a></li>
-                <li><a class="dropdown-item" href="#">Faculdade</a></li>
-                <li><a class="dropdown-item" href="#">Trabalho</a></li>
-                <li><a class="dropdown-item" href="#">Pessoal</a></li>
-                <li><a class="dropdown-item" href="#">Notas Excluidas</a></li>
+                <li><a id="filtrar_importantes" class="dropdown-item" href="#">Importantes</a></li>
+                <li><a id="filtrar_faculdade" class="dropdown-item" href="#">Faculdade</a></li>
+                <li><a id="filtrar_trabalho" class="dropdown-item" href="#">Trabalho</a></li>
+                <li><a id="filtrar_pessoal" class="dropdown-item" href="#">Pessoal</a></li>
+                <li><a id="filtrar_excluidas" class="dropdown-item" href="#">Notas Excluidas</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Cadastrar</a></li>
               </ul>
@@ -65,6 +67,7 @@
               type="search"
               placeholder="Buscar"
               aria-label="Buscar"
+              id="busca"
             />
             <button class="btn btn-outline-warning text-warning bg-dark" type="submit">
               Buscar
@@ -114,7 +117,7 @@
                 <div class="mb-3">
                     <select class="form-select" aria-label="Categoria" id="categoria">
                         <option selected>Selecione uma categoria</option>
-                        <option>Estudos</option>
+                        <option>Faculdade</option>
                         <option>Trabalho</option>
                         <option>Pessoal</option>
                       </select>
